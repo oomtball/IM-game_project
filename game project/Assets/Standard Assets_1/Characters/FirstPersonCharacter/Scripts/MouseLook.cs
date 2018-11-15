@@ -96,13 +96,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }
-            /*
+
             if (Talkable.isChoosing)
             {
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }
-*/
+
         }
 
         Quaternion ClampRotationAroundXAxis(Quaternion q)

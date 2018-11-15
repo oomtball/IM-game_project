@@ -18,12 +18,12 @@ public class Talkable : MonoBehaviour
     {
         get { return flowchartManager.GetBooleanVariable("talking"); }
     }
-    /*
+
     public static bool isChoosing
     {
         get { return flowchartManager.GetBooleanVariable("choosing"); }
     }
-*/
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
