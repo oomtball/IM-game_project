@@ -6,7 +6,7 @@ using Fungus;
 public class doorAController : MonoBehaviour
 {
 
-    public Flowchart talkFlowchart;
+    public static Flowchart talkFlowchart;
     public static Flowchart flowchartManager;
     public string onMouseDown;
     public Transform player;
@@ -14,6 +14,7 @@ public class doorAController : MonoBehaviour
     void Awake()
     {
         flowchartManager = GameObject.FindGameObjectWithTag("flowchartController").GetComponent<Flowchart>();
+        talkFlowchart = GameObject.FindGameObjectWithTag("talkFlowchart").GetComponent<Flowchart>();
     }
 
     public static bool isTalking
@@ -26,13 +27,25 @@ public class doorAController : MonoBehaviour
         get { return flowchartManager.GetBooleanVariable("choosing"); }
     }
 
+    public static bool elecFixed
+    {
+        get { return talkFlowchart.GetBooleanVariable("elecFixed"); }
+    }
+
     private void OnMouseDown()
     {
         float dist = Vector3.Distance(player.position, transform.position);
         if (dist <= 15 && !isTalking)
         {
-            Block targetBlock = talkFlowchart.FindBlock(onMouseDown);
-            talkFlowchart.ExecuteBlock(targetBlock);
+            if (!elecFixed)
+            {
+                talkFlowchart.ExecuteBlock(talkFlowchart.FindBlock("noReaction"));
+            }
+            else
+            {
+                Block targetBlock = talkFlowchart.FindBlock(onMouseDown);
+                talkFlowchart.ExecuteBlock(targetBlock);
+            }
         }
     }
 }

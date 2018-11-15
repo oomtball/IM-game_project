@@ -12,6 +12,8 @@ TagManager:
   - flowchartController
   - justACube
   - item
+  - talkFlowchart
+  - light
   layers:
   - Default
   - TransparentFX
