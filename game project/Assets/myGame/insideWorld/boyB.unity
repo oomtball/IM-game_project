@@ -1453,7 +1453,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalScale.y
-      value: 6
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_StepInterval
@@ -1865,6 +1865,7 @@ GameObject:
   - component: {fileID: 744577727}
   - component: {fileID: 744577726}
   - component: {fileID: 744577728}
+  - component: {fileID: 744577729}
   m_Layer: 0
   m_Name: talkFlowchart
   m_TagString: talkFlowchart
@@ -1941,7 +1942,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 744577725}
   selectedCommands:
-  - {fileID: 744577727}
+  - {fileID: 744577729}
   variables:
   - {fileID: 744577707}
   - {fileID: 744577710}
@@ -2517,7 +2518,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 74.281494
-    y: -58.984528
+    y: -62.984528
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -2527,6 +2528,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 744577729}
   - {fileID: 744577727}
   - {fileID: 744577728}
   - {fileID: 744577726}
@@ -2659,6 +2661,40 @@ MonoBehaviour:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 36.34316, y: 228.3, z: 44.48}
   isLocal: 0
+--- !u!114 &744577729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 744577702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8feaa22bae049c43a1c6dfe095c498c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 25
+  indentLevel: 0
+  _targetObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 1466698395}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  _toFrom: 0
+  _absAdd: 0
+  easeType: 4
+  loopType: 35
+  repeats: 0
+  stopPreviousTweens: 0
+  waitUntilFinished: 1
+  _toTransform:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 0}
+  _toRotation:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 135}
+  isLocal: 0
+  rotateMode: 0
 --- !u!1 &758586517
 GameObject:
   m_ObjectHideFlags: 0
@@ -5226,8 +5262,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1466698395}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: -55.38, y: 206.23, z: -42.74}
-  m_LocalScale: {x: 1.2984369, y: 2.1847498, z: 1.2984369}
+  m_LocalPosition: {x: -53.9, y: 206.23, z: -42.74}
+  m_LocalScale: {x: 1.2984369, y: 5.1710844, z: 1.2984369}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 21
