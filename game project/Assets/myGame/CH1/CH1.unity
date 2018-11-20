@@ -445,7 +445,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a733e0f884f5f4e81943adc1da9e3c85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goToTheScene: room
 --- !u!4 &42307906
 Transform:
   m_ObjectHideFlags: 0
@@ -5573,6 +5572,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 563b7c8d5ac054142a2d2fac8b3d5b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onMouseDown: 
+  item: {fileID: 0}
 --- !u!1 &1101839891
 GameObject:
   m_ObjectHideFlags: 0
@@ -6613,7 +6614,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1225978189}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1225978258}
   variables: []
   description: 
   stepPause: 0

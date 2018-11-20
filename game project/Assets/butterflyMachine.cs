@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
 
-public class doorAController : MonoBehaviour
-{
+public class butterflyMachine : MonoBehaviour {
+
     public static Flowchart talkFlowchart;
     public static Flowchart flowchartManager;
     public string onMouseDown;
     public static Transform player;
-    
-    
+
+
     void Awake()
     {
         flowchartManager = GameObject.FindGameObjectWithTag("flowchartController").GetComponent<Flowchart>();

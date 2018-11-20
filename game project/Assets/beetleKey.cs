@@ -3,21 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
 
-public class doorAController : MonoBehaviour
-{
+public class beetleKey : MonoBehaviour {
     public static Flowchart talkFlowchart;
     public static Flowchart flowchartManager;
     public string onMouseDown;
     public static Transform player;
-    
-    
+
+
     void Awake()
     {
         flowchartManager = GameObject.FindGameObjectWithTag("flowchartController").GetComponent<Flowchart>();
         talkFlowchart = GameObject.FindGameObjectWithTag("talkFlowchart").GetComponent<Flowchart>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
-
     public static bool isTalking
     {
         get { return flowchartManager.GetBooleanVariable("talking"); }
@@ -27,26 +25,17 @@ public class doorAController : MonoBehaviour
     {
         get { return flowchartManager.GetBooleanVariable("choosing"); }
     }
-
-    public static bool elecFixed
+    public static int beetleTimes
     {
-        get { return talkFlowchart.GetBooleanVariable("elecFixed"); }
+        get { return talkFlowchart.GetIntegerVariable("beetleKeyTimes"); }
     }
-
     private void OnMouseDown()
     {
         float dist = Vector3.Distance(player.position, transform.position);
-        if (dist <= 15 && !isTalking)
+        if (dist <= 15 && !isTalking && beetleTimes == 0)
         {
-            if (!elecFixed)
-            {
-                talkFlowchart.ExecuteBlock(talkFlowchart.FindBlock("noReaction"));
-            }
-            else
-            {
-                Block targetBlock = talkFlowchart.FindBlock(onMouseDown);
-                talkFlowchart.ExecuteBlock(targetBlock);
-            }
+            Block targetBlock = talkFlowchart.FindBlock(onMouseDown);
+            talkFlowchart.ExecuteBlock(targetBlock);
         }
     }
 }

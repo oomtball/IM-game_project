@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
 
-public class doorAController : MonoBehaviour
-{
+public class goldenButterfly : MonoBehaviour {
     public static Flowchart talkFlowchart;
     public static Flowchart flowchartManager;
     public string onMouseDown;
     public static Transform player;
-    
-    
+
     void Awake()
     {
         flowchartManager = GameObject.FindGameObjectWithTag("flowchartController").GetComponent<Flowchart>();
@@ -28,9 +26,13 @@ public class doorAController : MonoBehaviour
         get { return flowchartManager.GetBooleanVariable("choosing"); }
     }
 
-    public static bool elecFixed
+    public static bool butterMachineOpen
     {
-        get { return talkFlowchart.GetBooleanVariable("elecFixed"); }
+        get { return talkFlowchart.GetBooleanVariable("butterMachineOpen"); }
+    }
+    public static bool butterflySpecimen
+    {
+        get { return talkFlowchart.GetBooleanVariable("butterflySpecimen"); }
     }
 
     private void OnMouseDown()
@@ -38,14 +40,21 @@ public class doorAController : MonoBehaviour
         float dist = Vector3.Distance(player.position, transform.position);
         if (dist <= 15 && !isTalking)
         {
-            if (!elecFixed)
+            if (!butterMachineOpen)
             {
                 talkFlowchart.ExecuteBlock(talkFlowchart.FindBlock("noReaction"));
             }
             else
             {
-                Block targetBlock = talkFlowchart.FindBlock(onMouseDown);
-                talkFlowchart.ExecuteBlock(targetBlock);
+                if (!butterflySpecimen)
+                {
+                    Block targetBlock = talkFlowchart.FindBlock(onMouseDown);
+                    talkFlowchart.ExecuteBlock(targetBlock);
+                }
+                else{
+                    Block targetBlock = talkFlowchart.FindBlock("goldenButterfly2");
+                    talkFlowchart.ExecuteBlock(targetBlock);
+                }
             }
         }
     }

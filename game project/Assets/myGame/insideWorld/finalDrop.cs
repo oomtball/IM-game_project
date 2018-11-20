@@ -9,12 +9,13 @@ public class finalDrop : MonoBehaviour
     public static Flowchart talkFlowchart;
     public static Flowchart flowchartManager;
     public string onMouseDown;
-    public Transform player;
+    public static Transform player;
 
     void Awake()
     {
         flowchartManager = GameObject.FindGameObjectWithTag("flowchartController").GetComponent<Flowchart>();
         talkFlowchart = GameObject.FindGameObjectWithTag("talkFlowchart").GetComponent<Flowchart>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     public static bool isTalking

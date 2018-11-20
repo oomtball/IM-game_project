@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
 
-public class doorAController : MonoBehaviour
-{
+public class survey : MonoBehaviour {
     public static Flowchart talkFlowchart;
     public static Flowchart flowchartManager;
     public string onMouseDown;
     public static Transform player;
-    
-    
+
     void Awake()
     {
         flowchartManager = GameObject.FindGameObjectWithTag("flowchartController").GetComponent<Flowchart>();
@@ -28,25 +26,13 @@ public class doorAController : MonoBehaviour
         get { return flowchartManager.GetBooleanVariable("choosing"); }
     }
 
-    public static bool elecFixed
-    {
-        get { return talkFlowchart.GetBooleanVariable("elecFixed"); }
-    }
-
     private void OnMouseDown()
     {
         float dist = Vector3.Distance(player.position, transform.position);
         if (dist <= 15 && !isTalking)
         {
-            if (!elecFixed)
-            {
-                talkFlowchart.ExecuteBlock(talkFlowchart.FindBlock("noReaction"));
-            }
-            else
-            {
-                Block targetBlock = talkFlowchart.FindBlock(onMouseDown);
-                talkFlowchart.ExecuteBlock(targetBlock);
-            }
+            Block targetBlock = talkFlowchart.FindBlock(onMouseDown);
+            talkFlowchart.ExecuteBlock(targetBlock);
         }
     }
 }

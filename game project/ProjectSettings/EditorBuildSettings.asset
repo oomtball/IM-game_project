@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/myGame/room.unity
     guid: 42a173a209e134aba95bb3085a8240a7
+  - enabled: 1
+    path: Assets/myGame/insideWorld/girlC.unity
+    guid: ad642bb8b1a674c969753694d9b52ea6
+  - enabled: 1
+    path: Assets/myGame/insideWorld/boyB.unity
+    guid: 3a1142a70c34348d9a15e422fb0270b2
+  - enabled: 1
+    path: Assets/myGame/gallery.unity
+    guid: 5cbef3e065060459f83a2f12c99105a5
   m_configObjects: {}

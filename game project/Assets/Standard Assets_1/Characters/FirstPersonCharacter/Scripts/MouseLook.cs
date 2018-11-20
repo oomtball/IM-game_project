@@ -97,7 +97,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 Cursor.visible = true;
             }
 
-            if (Talkable.isChoosing)
+            if (Talkable.isChoosing || notebookOpen.bookOpen)
             {
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
