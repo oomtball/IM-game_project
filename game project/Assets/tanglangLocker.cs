@@ -4,7 +4,7 @@ using UnityEngine;
 using Fungus;
 
 public class tanglangLocker : MonoBehaviour {
-    public static GameObject item;
+    public GameObject item;
     public static Flowchart talkFlowchart;
     public static Flowchart flowchartManager;
     public static Transform player;
@@ -12,7 +12,6 @@ public class tanglangLocker : MonoBehaviour {
 
     void Awake()
     {
-        item = GameObject.Find("tanglangKey");
         flowchartManager = GameObject.FindGameObjectWithTag("flowchartController").GetComponent<Flowchart>();
         talkFlowchart = GameObject.FindGameObjectWithTag("talkFlowchart").GetComponent<Flowchart>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();

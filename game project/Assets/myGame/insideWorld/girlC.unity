@@ -1833,8 +1833,9 @@ Transform:
   - {fileID: 1515870476}
   - {fileID: 1310508969}
   - {fileID: 932830305}
+  - {fileID: 1345537928}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &264588722
 MonoBehaviour:
@@ -5384,7 +5385,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 122
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!136 &765950304
 CapsuleCollider:
@@ -6274,7 +6275,7 @@ Transform:
   - {fileID: 1249580389}
   - {fileID: 1846704843}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &823647973
 GameObject:
@@ -10527,11 +10528,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1345537924}
   m_LocalRotation: {x: 0.6980674, y: -0, z: -0, w: 0.7160321}
-  m_LocalPosition: {x: 1171.22, y: -65.55, z: -75.79}
-  m_LocalScale: {x: 1.958575, y: 1.9585764, z: 1.9585764}
+  m_LocalPosition: {x: 164.2962, y: -256.05, z: -105.98942}
+  m_LocalScale: {x: 1.958575, y: 1.9585772, z: 1.9585772}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 264588721}
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 88.545006, y: 0, z: 0}
 --- !u!114 &1345537929
 MonoBehaviour:
@@ -15338,7 +15339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 2349.3977, y: 242.48709}
+  scrollPos: {x: 1775.7533, y: 137.8359}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 0
   blockViewHeight: 400
