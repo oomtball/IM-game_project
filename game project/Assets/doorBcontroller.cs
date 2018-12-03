@@ -26,17 +26,12 @@ public class doorBcontroller : MonoBehaviour {
         get { return flowchartManager.GetBooleanVariable("choosing"); }
     }
 
-    public static bool doorAopen
-    {
-        get { return talkFlowchart.GetBooleanVariable("autoDoorAOpen"); }
-    }
-
     private void OnMouseDown()
     {
         float dist = Vector3.Distance(player.position, transform.position);
-        if (dist <= 15 && !isTalking)
+        if (dist <= 30 && !isTalking)
         {
-            if (!doorAopen)
+            if (spiderLocker.spiderKeyOpen == false)
             {
                 talkFlowchart.ExecuteBlock(talkFlowchart.FindBlock("noReaction"));
             }

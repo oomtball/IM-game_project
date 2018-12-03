@@ -26,7 +26,7 @@ public class getItem : MonoBehaviour {
             transform.position += offset;
             prePos = Camera.main.ScreenToWorldPoint(mouse);
         }
-        if (Input.GetMouseButton(1)){
+        if (Input.GetMouseButton(1) && isGettingItem){
             isGettingItem = false;
             item.GetComponent<Rigidbody>().useGravity = true;
         }
@@ -34,7 +34,6 @@ public class getItem : MonoBehaviour {
     private void OnMouseDown()
     {
         float dist = Vector3.Distance(player.position, transform.position);
-        Debug.Log(dist);
         if (isGettingItem == false && dist <= 30)
         {
             Vector3 mouse = Input.mousePosition;

@@ -28,9 +28,9 @@ public class doorAController : MonoBehaviour
         get { return flowchartManager.GetBooleanVariable("choosing"); }
     }
 
-    public static bool elecFixed
+    public static bool butterKeyOpen
     {
-        get { return talkFlowchart.GetBooleanVariable("elecFixed"); }
+        get { return talkFlowchart.GetBooleanVariable("butterKeyOpen"); }
     }
 
     private void OnMouseDown()
@@ -38,7 +38,7 @@ public class doorAController : MonoBehaviour
         float dist = Vector3.Distance(player.position, transform.position);
         if (dist <= 15 && !isTalking)
         {
-            if (!elecFixed)
+            if (!butterKeyOpen)
             {
                 talkFlowchart.ExecuteBlock(talkFlowchart.FindBlock("noReaction"));
             }
@@ -46,6 +46,22 @@ public class doorAController : MonoBehaviour
             {
                 Block targetBlock = talkFlowchart.FindBlock(onMouseDown);
                 talkFlowchart.ExecuteBlock(targetBlock);
+                doorANum1.red.SetActive(false);
+                doorANum1.blue.SetActive(false);
+                doorANum1.green.SetActive(false);
+                doorANum1.yellow.SetActive(false);
+                doorANum2.red.SetActive(false);
+                doorANum2.blue.SetActive(false);
+                doorANum2.green.SetActive(false);
+                doorANum2.yellow.SetActive(false);
+                doorANum3.red.SetActive(false);
+                doorANum3.blue.SetActive(false);
+                doorANum3.green.SetActive(false);
+                doorANum3.yellow.SetActive(false);
+                doorANum4.red.SetActive(false);
+                doorANum4.blue.SetActive(false);
+                doorANum4.green.SetActive(false);
+                doorANum4.yellow.SetActive(false);
             }
         }
     }

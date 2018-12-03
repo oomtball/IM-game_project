@@ -34,11 +34,15 @@ public class goldenButterfly : MonoBehaviour {
     {
         get { return talkFlowchart.GetBooleanVariable("butterflySpecimen"); }
     }
+    public static bool purpleBasin
+    {
+        get { return talkFlowchart.GetBooleanVariable("purpleBasin"); }
+    }
 
     private void OnMouseDown()
     {
         float dist = Vector3.Distance(player.position, transform.position);
-        if (dist <= 15 && !isTalking)
+        if (dist <= 30 && !isTalking)
         {
             if (!butterMachineOpen)
             {
@@ -52,8 +56,15 @@ public class goldenButterfly : MonoBehaviour {
                     talkFlowchart.ExecuteBlock(targetBlock);
                 }
                 else{
-                    Block targetBlock = talkFlowchart.FindBlock("goldenButterfly2");
-                    talkFlowchart.ExecuteBlock(targetBlock);
+                    if (!purpleBasin)
+                    {
+                        Block targetBlock = talkFlowchart.FindBlock("goldenButterfly2");
+                        talkFlowchart.ExecuteBlock(targetBlock);
+                    }
+                    else{
+                        talkFlowchart.ExecuteBlock("makeButterSpecimen");
+                        butterKeyGetting.butterKey.SetActive(true);
+                    }
                 }
             }
         }

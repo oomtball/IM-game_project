@@ -28,17 +28,12 @@ public class butterflyMachine : MonoBehaviour {
         get { return flowchartManager.GetBooleanVariable("choosing"); }
     }
 
-    public static bool elecFixed
-    {
-        get { return talkFlowchart.GetBooleanVariable("elecFixed"); }
-    }
-
     private void OnMouseDown()
     {
         float dist = Vector3.Distance(player.position, transform.position);
-        if (dist <= 15 && !isTalking)
+        if (dist <= 30 && !isTalking)
         {
-            if (!elecFixed)
+            if (tanglangLocker.tanglangKeyOpen == false)
             {
                 talkFlowchart.ExecuteBlock(talkFlowchart.FindBlock("noReaction"));
             }
