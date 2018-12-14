@@ -5,9 +5,10 @@ using Fungus;
 
 public class getItem : MonoBehaviour {
     public static Transform player;
+    public GameObject pivot;
+    public GameObject goal;
     public static bool isGettingItem = false;
     public GameObject item;
-    Vector3 prePos;
     Rigidbody body;
     void Awake()
     {
@@ -19,16 +20,12 @@ public class getItem : MonoBehaviour {
     {
         if (isGettingItem)
         {
-            Vector3 mouse = Input.mousePosition;
-            mouse.z = 10;
-            Vector3 newPos = Camera.main.ScreenToWorldPoint(mouse);
-            Vector3 offset = newPos - prePos;
-            transform.position += offset;
-            prePos = Camera.main.ScreenToWorldPoint(mouse);
+            item.transform.SetParent(pivot.transform, true);
         }
         if (Input.GetMouseButton(1) && isGettingItem){
             isGettingItem = false;
             item.GetComponent<Rigidbody>().useGravity = true;
+            item.transform.SetParent(null);
         }
     }
     private void OnMouseDown()
@@ -36,10 +33,7 @@ public class getItem : MonoBehaviour {
         float dist = Vector3.Distance(player.position, transform.position);
         if (isGettingItem == false && dist <= 30)
         {
-            Vector3 mouse = Input.mousePosition;
-            mouse.z = 10;
-            prePos = Camera.main.ScreenToWorldPoint(mouse);
-
+            item.transform.position = goal.transform.position;
             isGettingItem = true;
             item.GetComponent<Rigidbody>().useGravity = false;
         }

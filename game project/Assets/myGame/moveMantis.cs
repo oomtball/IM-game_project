@@ -28,6 +28,6 @@ public class moveMantis : MonoBehaviour {
 
 
         Vector3 finalPosition = new Vector3(movementX, movementY, 0);
-        //transform.localPosition = Vector3.Lerp(transform.localPosition, initialPosition + finalPosition, Time.deltaTime * smoothAmount);
+        transform.localPosition = Vector3.Lerp(transform.localPosition, initialPosition + finalPosition, Time.deltaTime * smoothAmount);
     }
 }

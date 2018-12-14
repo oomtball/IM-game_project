@@ -8,6 +8,7 @@ public class goldenButterfly : MonoBehaviour {
     public static Flowchart flowchartManager;
     public string onMouseDown;
     public static Transform player;
+    public static bool butterflyInSpecimen = false;
 
     void Awake()
     {
@@ -63,7 +64,7 @@ public class goldenButterfly : MonoBehaviour {
                     }
                     else{
                         talkFlowchart.ExecuteBlock("makeButterSpecimen");
-                        butterKeyGetting.butterKey.SetActive(true);
+                        butterflyInSpecimen = true;
                     }
                 }
             }

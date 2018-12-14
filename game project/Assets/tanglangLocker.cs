@@ -5,6 +5,7 @@ using Fungus;
 
 public class tanglangLocker : MonoBehaviour {
     public GameObject item;
+    public GameObject girlC;
     public static Flowchart talkFlowchart;
     public static Flowchart flowchartManager;
     public static Transform player;
@@ -33,6 +34,7 @@ public class tanglangLocker : MonoBehaviour {
             Vector3 tanglangKeyPosition = new Vector3(1171.7f, -45.44f, -76.1f);
             item.transform.position = tanglangKeyPosition;
             item.transform.rotation = Quaternion.Euler(90, 0, 0);
+            gettingTanglangKey.tanglangKey.transform.SetParent(girlC.transform, true);
             gettingTanglangKey.gettingTanglang = false;
             gettingTanglangKey.canGetThis = false;
             talkFlowchart.ExecuteBlock(talkFlowchart.FindBlock("tanglangKeyOpen"));

@@ -7,7 +7,7 @@ public class finalTrapOpen : MonoBehaviour {
     public static Flowchart talkFlowchart;
     public static Flowchart flowchartManager;
     public static Transform player;
-    public bool finish = false;
+    public static bool finish = false;
 
     void Awake()
     {

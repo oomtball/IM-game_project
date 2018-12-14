@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class tanglangGetting : MonoBehaviour {
     public static Transform player;
+    public static GameObject pivot;
+    public static GameObject goal;
+    public GameObject lab;
     public static bool gettingTanglang = false;
     public static GameObject tanglang;
     public static bool canGetThis = true;
@@ -13,35 +16,30 @@ public class tanglangGetting : MonoBehaviour {
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         tanglang = GameObject.Find("tanglang");
-        //body = GetComponent<Rigidbody>();
+        pivot = GameObject.Find("pivot");
+        goal = GameObject.Find("goal");
     }
     private void Update()
     {
-        if (gettingTanglang && canGetThis)
+        if (gettingTanglang)
         {
-            Vector3 mouse = Input.mousePosition;
-            mouse.z = 10;
-            Vector3 newPos = Camera.main.ScreenToWorldPoint(mouse);
-            Vector3 offset = newPos - prePos;
-            transform.position += offset;
-            prePos = Camera.main.ScreenToWorldPoint(mouse);
+            tanglang.transform.SetParent(pivot.transform, true);
         }
         if (Input.GetMouseButton(1) && gettingTanglang)
         {
             gettingTanglang = false;
+            tanglang.transform.SetParent(lab.transform, true);
+            tanglang.GetComponent<Rigidbody>().useGravity = true;
         }
     }
     private void OnMouseDown()
     {
-        //float dist = Vector3.Distance(player.position, transform.position);
-        if (gettingTanglang == false)
+        float dist = Vector3.Distance(player.position, transform.position);
+        if (gettingTanglang == false && dist <= 30)
         {
-            Vector3 mouse = Input.mousePosition;
-            mouse.z = 10;
-            prePos = Camera.main.ScreenToWorldPoint(mouse);
-
+            tanglang.transform.position = goal.transform.position;
             gettingTanglang = true;
-            //item.GetComponent<Rigidbody>().useGravity = false;
+            tanglang.GetComponent<Rigidbody>().useGravity = false;
         }
     }
 }

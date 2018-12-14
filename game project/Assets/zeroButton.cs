@@ -23,22 +23,29 @@ public class zeroButton : MonoBehaviour {
     }
     private void OnMouseDown()
     {
-        float dist = Vector3.Distance(player.position, transform.position);
-        if (dist <= 30 && !isTalking)
+        if (cicadaLocker.cicadaOpen)
         {
-            if (sixButton.count == 1 && sevenButton.count == 0 && threeButton.count == 0 && count == 0)
+            float dist = Vector3.Distance(player.position, transform.position);
+            if (dist <= 30 && !isTalking)
             {
-                count += 1;
+                if (sixButton.count == 1 && sevenButton.count == 0 && threeButton.count == 0 && count == 0)
+                {
+                    count += 1;
+                }
+                else if (sixButton.count == 1 && sevenButton.count == 0 && threeButton.count == 0 && count == 1)
+                {
+                    count += 1;
+                }
+                else
+                {
+                    right = false;
+                    talkFlowchart.ExecuteBlock("finalTrapFail");
+                }
             }
-            else if (sixButton.count == 1 && sevenButton.count == 0 && threeButton.count == 0 && count == 1)
-            {
-                count += 1;
-            }
-            else
-            {
-                right = false;
-                talkFlowchart.ExecuteBlock("finalTrapFail");
-            }
+        }
+        else
+        {
+            talkFlowchart.ExecuteBlock("noReaction");
         }
     }
     public static void countZero(){

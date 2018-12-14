@@ -1,17 +1,19 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
 
 public class Talkable : MonoBehaviour
 {
-    public Flowchart talkFlowchart;
+    public static Flowchart talkFlowchart;
     public static Flowchart flowchartManager;
     public string select;
     
     void Awake()
     {
         flowchartManager = GameObject.FindGameObjectWithTag("flowchartController").GetComponent<Flowchart>();
+        talkFlowchart = GameObject.FindGameObjectWithTag("talkFlowchart").GetComponent<Flowchart>();
     }
 
     public static bool isTalking

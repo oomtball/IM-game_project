@@ -7,6 +7,7 @@ public class deskDoorAButton : MonoBehaviour {
     public static Flowchart talkFlowchart;
     public static Flowchart flowchartManager;
     public static Transform player;
+    public static bool doorAFinish = false;
     private void Awake()
     {
         flowchartManager = GameObject.FindGameObjectWithTag("flowchartController").GetComponent<Flowchart>();
@@ -45,6 +46,7 @@ public class deskDoorAButton : MonoBehaviour {
             if (doorANum1.ans1IsRight && doorANum2.ans2IsRight && doorANum3.ans3IsRight && doorANum4.ans4IsRight)
             {
                 talkFlowchart.ExecuteBlock("doorARight");
+                doorAFinish = true;
             }
             else{
                 talkFlowchart.ExecuteBlock("doorAWrong");

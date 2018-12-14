@@ -5,6 +5,9 @@ using Fungus;
 
 public class butterKeyGetting : MonoBehaviour {
     public static Transform player;
+    public static GameObject pivot;
+    public static GameObject goal;
+    public GameObject girlC;
     public static bool gettingButterfly = false;
     public static GameObject butterKey;
     public static bool canGetThis = true;
@@ -14,36 +17,35 @@ public class butterKeyGetting : MonoBehaviour {
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         butterKey = GameObject.Find("butterflyKey");
+        pivot = GameObject.Find("pivot");
+        goal = GameObject.Find("goal");
         butterKey.SetActive(false);
-        //body = GetComponent<Rigidbody>();
     }
     private void Update()
     {
         if (gettingButterfly && canGetThis)
         {
-            Vector3 mouse = Input.mousePosition;
-            mouse.z = 10;
-            Vector3 newPos = Camera.main.ScreenToWorldPoint(mouse);
-            Vector3 offset = newPos - prePos;
-            transform.position += offset;
-            prePos = Camera.main.ScreenToWorldPoint(mouse);
+            butterKey.transform.SetParent(pivot.transform, true);
         }
         if (Input.GetMouseButton(1) && gettingButterfly)
         {
             gettingButterfly = false;
+            butterKey.transform.SetParent(girlC.transform, true);
+            butterKey.GetComponent<Rigidbody>().useGravity = true;
+            butterKey.GetComponent<Rigidbody>().isKinematic = false;
+            butterKey.GetComponent<Rigidbody>().detectCollisions = true;
         }
     }
     private void OnMouseDown()
     {
-        //float dist = Vector3.Distance(player.position, transform.position);
-        if (gettingButterfly == false)
+        float dist = Vector3.Distance(player.position, transform.position);
+        if (gettingButterfly == false && canGetThis && dist <= 30)
         {
-            Vector3 mouse = Input.mousePosition;
-            mouse.z = 10;
-            prePos = Camera.main.ScreenToWorldPoint(mouse);
-
+            butterKey.transform.position = goal.transform.position;
+            butterKey.GetComponent<Rigidbody>().useGravity = false;
             gettingButterfly = true;
-            //item.GetComponent<Rigidbody>().useGravity = false;
+            butterKey.GetComponent<Rigidbody>().isKinematic = true;
+            butterKey.GetComponent<Rigidbody>().detectCollisions = false;
         }
     }
 }

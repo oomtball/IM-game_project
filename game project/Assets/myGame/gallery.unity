@@ -602,8 +602,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 608952248}
-  selectedCommands:
-  - {fileID: 608952247}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -891,8 +890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11a7afa9937774af7af561b3b52e3d26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  talkFlowchart: {fileID: 608952246}
-  select: startGallery
+  select: start
 --- !u!65 &728561696
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1771,7 +1769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 608952246}
+  selectedFlowchart: {fileID: 1597338508}
 --- !u!4 &1276568172
 Transform:
   m_ObjectHideFlags: 1

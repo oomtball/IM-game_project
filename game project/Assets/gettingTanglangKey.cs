@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class gettingTanglangKey : MonoBehaviour {
     public static Transform player;
+    public static GameObject pivot;
+    public static GameObject goal;
+    public GameObject girlC;
     public static bool gettingTanglang = false;
     public static GameObject tanglangKey;
     public static bool canGetThis = true;
@@ -14,35 +17,34 @@ public class gettingTanglangKey : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         tanglangKey = GameObject.Find("tanglangKey");
         tanglangKey.SetActive(false);
-        //body = GetComponent<Rigidbody>();
+        pivot = GameObject.Find("pivot");
+        goal = GameObject.Find("goal");
     }
     private void Update()
     {
         if (gettingTanglang && canGetThis)
         {
-            Vector3 mouse = Input.mousePosition;
-            mouse.z = 10;
-            Vector3 newPos = Camera.main.ScreenToWorldPoint(mouse);
-            Vector3 offset = newPos - prePos;
-            transform.position += offset;
-            prePos = Camera.main.ScreenToWorldPoint(mouse);
+            tanglangKey.transform.SetParent(pivot.transform, true);
         }
         if (Input.GetMouseButton(1) && gettingTanglang)
         {
             gettingTanglang = false;
+            tanglangKey.transform.SetParent(girlC.transform, true);
+            tanglangKey.GetComponent<Rigidbody>().useGravity = true;
+            tanglangKey.GetComponent<Rigidbody>().isKinematic = false;
+            tanglangKey.GetComponent<Rigidbody>().detectCollisions = true;
         }
     }
     private void OnMouseDown()
     {
-        //float dist = Vector3.Distance(player.position, transform.position);
-        if (gettingTanglang == false)
+        float dist = Vector3.Distance(player.position, transform.position);
+        if (gettingTanglang == false && dist <= 30 && canGetThis)
         {
-            Vector3 mouse = Input.mousePosition;
-            mouse.z = 10;
-            prePos = Camera.main.ScreenToWorldPoint(mouse);
-
+            tanglangKey.transform.position = goal.transform.position;
+            tanglangKey.GetComponent<Rigidbody>().useGravity = false;
             gettingTanglang = true;
-            //item.GetComponent<Rigidbody>().useGravity = false;
+            tanglangKey.GetComponent<Rigidbody>().isKinematic = true;
+            tanglangKey.GetComponent<Rigidbody>().detectCollisions = false;
         }
     }
 }

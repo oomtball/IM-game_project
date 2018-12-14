@@ -24,20 +24,26 @@ public class threeButton : MonoBehaviour {
     }
     private void OnMouseDown()
     {
-        float dist = Vector3.Distance(player.position, transform.position);
-        if (dist <= 30 && !isTalking)
+        if (cicadaLocker.cicadaOpen)
         {
-            if (sixButton.count == 2 && sevenButton.count == 1 && zeroButton.count == 2 && count == 0)
+            float dist = Vector3.Distance(player.position, transform.position);
+            if (dist <= 30 && !isTalking)
             {
-                count += 1;
-                finalSuccess = true;
-                talkFlowchart.ExecuteBlock("finalTrapSuccess");
+                if (sixButton.count == 2 && sevenButton.count == 1 && zeroButton.count == 2 && count == 0)
+                {
+                    count += 1;
+                    finalSuccess = true;
+                    talkFlowchart.ExecuteBlock("finalTrapSuccess");
+                }
+                else
+                {
+                    right = false;
+                    talkFlowchart.ExecuteBlock("finalTrapFail");
+                }
             }
-            else
-            {
-                right = false;
-                talkFlowchart.ExecuteBlock("finalTrapFail");
-            }
+        }
+        else{
+            talkFlowchart.ExecuteBlock("noReaction");
         }
     }
     public static void countZero()
