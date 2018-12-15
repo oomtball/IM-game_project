@@ -31,6 +31,7 @@ public class endPaper : MonoBehaviour {
         {
             Destroy(paper);
             pickUpEndPaper = true;
+            bottle.bottle1.SetActive(true);
         }
     }
 }
