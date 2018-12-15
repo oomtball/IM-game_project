@@ -2660,8 +2660,7 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1273452404}
+  selectedBlocks: []
   selectedCommands: []
   variables:
   - {fileID: 1273452401}
@@ -4541,7 +4540,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11a7afa9937774af7af561b3b52e3d26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  talkFlowchart: {fileID: 799097015}
   select: startGirlB
 --- !u!65 &2133655640
 BoxCollider:
