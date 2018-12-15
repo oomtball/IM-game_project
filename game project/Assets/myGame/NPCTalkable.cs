@@ -27,7 +27,7 @@ public class NPCTalkable : MonoBehaviour
     private void OnMouseDown()
     {
         float dist = Vector3.Distance(player.position, transform.position);
-        if (dist <= 15 && !isTalking)
+        if (dist <= 30 && !isTalking)
         {
             Block targetBlock = talkFlowchart.FindBlock(onMouseDown);
             talkFlowchart.ExecuteBlock(targetBlock);
