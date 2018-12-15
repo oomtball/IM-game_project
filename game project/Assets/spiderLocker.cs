@@ -23,9 +23,9 @@ public class spiderLocker : MonoBehaviour {
         float dist = Vector3.Distance(player.position, transform.position);
         if (spiderKeyGetting.gettingSpider && dist <= 30)
         {
-            Vector3 spiderKeyPosition = new Vector3(1151.76f, -45.22f, -76.29f);
+            Vector3 spiderKeyPosition = new Vector3(1152.15f, -44.6346f, -74.0697f);
             item.transform.position = spiderKeyPosition;
-            item.transform.rotation = Quaternion.Euler(90, 0, 0);
+            item.transform.rotation = Quaternion.Euler(-90, 0, 0);
             spiderKeyGetting.gettingSpider = false;
             spiderKeyGetting.canGetThis = false;
             spiderKeyGetting.spiderKey.transform.SetParent(girlC.transform, true);

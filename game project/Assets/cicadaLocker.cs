@@ -31,9 +31,9 @@ public class cicadaLocker : MonoBehaviour {
         float dist = Vector3.Distance(player.position, transform.position);
         if (cicadaKeyGetting.gettingCicada && dist <= 30)
         {
-            Vector3 cicadaKeyPosition = new Vector3(1161.944f, -55.73f, -76.04058f);
+            Vector3 cicadaKeyPosition = new Vector3(1161.664f, -54.46f, -75.6605f);
             cicadaKeyGetting.cicadaKey.transform.position = cicadaKeyPosition;
-            cicadaKeyGetting.cicadaKey.transform.rotation = Quaternion.Euler(90, 0, 0);
+            cicadaKeyGetting.cicadaKey.transform.rotation = Quaternion.Euler(-90, 0, 0);
             cicadaKeyGetting.gettingCicada = false;
             cicadaKeyGetting.canGetThis = false;
             cicadaKeyGetting.cicadaKey.transform.SetParent(girlC.transform, true);
