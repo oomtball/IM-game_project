@@ -16,6 +16,7 @@ public class ch1Plot : MonoBehaviour {
     private bool cubeActive1 = false;
     private bool cubeActive2 = false;
     private bool cubeActive3 = false;
+    private bool eat = false;
     private void Awake()
     {
         flowchartManager = GameObject.FindGameObjectWithTag("flowchartController").GetComponent<Flowchart>();
@@ -137,8 +138,9 @@ public class ch1Plot : MonoBehaviour {
         {
             SceneManager.LoadScene("girlB");
         }
-        if (boyAPart3 && girlBPart3 && girlCPart3 && !part3End){
+        if (boyAPart3 && girlBPart3 && girlCPart3 && !eat){
             talkFlowchart.ExecuteBlock("part3Eat");
+            eat = true;
         }
         if (part3End)
         {
