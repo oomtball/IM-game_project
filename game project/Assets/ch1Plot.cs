@@ -12,10 +12,12 @@ public class ch1Plot : MonoBehaviour {
     public GameObject cube;
     public GameObject cube2;
     public GameObject cube3;
+    public GameObject cube4;
     private bool afterPart2 = false;
     private bool cubeActive1 = false;
     private bool cubeActive2 = false;
     private bool cubeActive3 = false;
+    private bool cubeActive4 = false;
     private bool eat = false;
     public static bool talkAfter5Books = false;
     private void Awake()
@@ -163,10 +165,15 @@ public class ch1Plot : MonoBehaviour {
             talkFlowchart.ExecuteBlock("part3Eat");
             eat = true;
         }
-        if (part3End)
+        if (part3End && !cubeActive3)
         {
             cube3.SetActive(true);
             cubeActive3 = true;
+        }
+        if (kitchenCube.end1Start && !cubeActive4)
+        {
+            cube4.SetActive(true);
+            cubeActive4 = true;
         }
         if (book1Read && book2Read && book3Read && book4Read && book5Read && !talkAfter5Books){
             talkFlowchart.ExecuteBlock("talkAfter5Books");

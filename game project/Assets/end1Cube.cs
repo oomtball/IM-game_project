@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
 
-public class kitchenCube : MonoBehaviour {
-
+public class end1Cube : MonoBehaviour
+{
     public static Flowchart talkFlowchart;
     public static Flowchart flowchartManager;
     public GameObject cube;
-    public static bool end1Start = false;
 
     void Awake()
     {
@@ -31,14 +30,8 @@ public class kitchenCube : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
-            if (ch1Plot.talkAfter5Books)
-                talkFlowchart.ExecuteBlock("plotKitchen");
-            else
-            {
-                talkFlowchart.ExecuteBlock("plotEnd1");
-                end1Start = true;
-            }
+            talkFlowchart.ExecuteBlock("end1End");
         }
-        Destroy(GameObject.Find("kitchenCube"));
+        Destroy(GameObject.Find("end1Cube"));
     }
 }
