@@ -17,6 +17,7 @@ public class ch1Plot : MonoBehaviour {
     private bool cubeActive2 = false;
     private bool cubeActive3 = false;
     private bool eat = false;
+    public static bool talkAfter5Books = false;
     private void Awake()
     {
         flowchartManager = GameObject.FindGameObjectWithTag("flowchartController").GetComponent<Flowchart>();
@@ -94,6 +95,26 @@ public class ch1Plot : MonoBehaviour {
     {
         get { return talkFlowchart.GetBooleanVariable("part3End"); }
     }
+    public static bool book1Read
+    {
+        get { return talkFlowchart.GetBooleanVariable("book1Read"); }
+    }
+    public static bool book2Read
+    {
+        get { return talkFlowchart.GetBooleanVariable("book2Read"); }
+    }
+    public static bool book3Read
+    {
+        get { return talkFlowchart.GetBooleanVariable("book3Read"); }
+    }
+    public static bool book4Read
+    {
+        get { return talkFlowchart.GetBooleanVariable("book4Read"); }
+    }
+    public static bool book5Read
+    {
+        get { return talkFlowchart.GetBooleanVariable("book5Read"); }
+    }
     private void Update()
     {
         if (boyAPart1 && boyBPart1 && girlAPart1
@@ -146,6 +167,10 @@ public class ch1Plot : MonoBehaviour {
         {
             cube3.SetActive(true);
             cubeActive3 = true;
+        }
+        if (book1Read && book2Read && book3Read && book4Read && book5Read && !talkAfter5Books){
+            talkFlowchart.ExecuteBlock("talkAfter5Books");
+            talkAfter5Books = true;
         }
     }
 }
