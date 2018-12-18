@@ -32,4 +32,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/myGame/insideWorld/girlB.unity
     guid: 6fb5f6d06170248b297e926e68ae20e1
+  - enabled: 1
+    path: Assets/myGame/ED/ED3.unity
+    guid: 329886cf916dc45f3b6f0aef8f600618
+  - enabled: 1
+    path: Assets/myGame/ED/ED1Dark.unity
+    guid: 26632b78869134cae951be0abddb7f74
+  - enabled: 1
+    path: Assets/myGame/ED/ED3Dark.unity
+    guid: 1ff0166c1b36c481ebf46d9aad2b29ab
   m_configObjects: {}

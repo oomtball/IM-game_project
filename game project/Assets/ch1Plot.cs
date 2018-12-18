@@ -117,6 +117,10 @@ public class ch1Plot : MonoBehaviour {
     {
         get { return talkFlowchart.GetBooleanVariable("book5Read"); }
     }
+    public static bool goToED1
+    {
+        get { return talkFlowchart.GetBooleanVariable("goToED1"); }
+    }
     private void Update()
     {
         if (boyAPart1 && boyBPart1 && girlAPart1
@@ -178,6 +182,9 @@ public class ch1Plot : MonoBehaviour {
         if (book1Read && book2Read && book3Read && book4Read && book5Read && !talkAfter5Books){
             talkFlowchart.ExecuteBlock("talkAfter5Books");
             talkAfter5Books = true;
+        }
+        if (goToED1){
+            SceneManager.LoadScene("ED1Dark");
         }
     }
 }

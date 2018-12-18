@@ -34,7 +34,7 @@ public class openBlue : MonoBehaviour
     private void OnMouseDown()
     {
         float dist = Vector3.Distance(player.position, transform.position);
-        if (dist <= 10000000)
+        if (dist <= 30)
         {
             if (!blueBasin && !redBasin)
             {

@@ -41,6 +41,7 @@ public class startPaper : MonoBehaviour {
             paper4.SetActive(true);
             paper5.SetActive(true);
             paper6.SetActive(true);
+            talkFlowchart.ExecuteBlock("startPaper");
         }
     }
 }

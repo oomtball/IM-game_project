@@ -31,6 +31,7 @@ public class paper4 : MonoBehaviour {
         {
             Destroy(paper);
             pickUpPaper4 = true;
+            talkFlowchart.ExecuteBlock("paper4");
         }
     }
 }

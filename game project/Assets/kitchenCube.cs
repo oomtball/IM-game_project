@@ -35,8 +35,11 @@ public class kitchenCube : MonoBehaviour {
                 talkFlowchart.ExecuteBlock("plotKitchen");
             else
             {
-                talkFlowchart.ExecuteBlock("plotEnd1");
-                end1Start = true;
+                if (!end1Start)
+                {
+                    talkFlowchart.ExecuteBlock("plotEnd1");
+                    end1Start = true;
+                }
             }
         }
         Destroy(GameObject.Find("kitchenCube"));
