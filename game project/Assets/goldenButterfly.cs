@@ -6,9 +6,10 @@ using Fungus;
 public class goldenButterfly : MonoBehaviour {
     public static Flowchart talkFlowchart;
     public static Flowchart flowchartManager;
-    public string onMouseDown;
+    public Flowchart butterflyChart;
     public static Transform player;
     public static bool butterflyInSpecimen = false;
+    public static bool butterflyOnSpecimen = false;
 
     void Awake()
     {
@@ -27,14 +28,6 @@ public class goldenButterfly : MonoBehaviour {
         get { return flowchartManager.GetBooleanVariable("choosing"); }
     }
 
-    public static bool butterMachineOpen
-    {
-        get { return talkFlowchart.GetBooleanVariable("butterMachineOpen"); }
-    }
-    public static bool butterflySpecimen
-    {
-        get { return talkFlowchart.GetBooleanVariable("butterflySpecimen"); }
-    }
     public static bool purpleBasin
     {
         get { return talkFlowchart.GetBooleanVariable("purpleBasin"); }
@@ -45,25 +38,24 @@ public class goldenButterfly : MonoBehaviour {
         float dist = Vector3.Distance(player.position, transform.position);
         if (dist <= 30 && !isTalking)
         {
-            if (!butterMachineOpen)
+            if (!butterflyMachine.butterMachineOpen)
             {
                 talkFlowchart.ExecuteBlock(talkFlowchart.FindBlock("noReaction"));
             }
             else
             {
-                if (!butterflySpecimen)
+                if (!butterflyOnSpecimen)
                 {
-                    Block targetBlock = talkFlowchart.FindBlock(onMouseDown);
-                    talkFlowchart.ExecuteBlock(targetBlock);
+                    butterflyChart.ExecuteBlock("goldenButterfly");
+                    butterflyOnSpecimen = true;
                 }
                 else{
                     if (!purpleBasin)
                     {
-                        Block targetBlock = talkFlowchart.FindBlock("goldenButterfly2");
-                        talkFlowchart.ExecuteBlock(targetBlock);
+                        butterflyChart.ExecuteBlock("goldenButterfly2");
                     }
                     else{
-                        talkFlowchart.ExecuteBlock("makeButterSpecimen");
+                        butterflyChart.ExecuteBlock("makeButterSpecimen");
                         butterflyInSpecimen = true;
                     }
                 }

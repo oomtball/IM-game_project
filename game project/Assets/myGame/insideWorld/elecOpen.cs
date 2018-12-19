@@ -11,6 +11,7 @@ public class elecOpen : MonoBehaviour
     public string onMouseDown;
     public static Transform player;
     public GameObject labLight;
+    public static bool isLight = false;
 
     void Awake()
     {
@@ -43,6 +44,7 @@ public class elecOpen : MonoBehaviour
                 labLight.SetActive(true); // false to hide, true to show
                 Block targetBlock = talkFlowchart.FindBlock(onMouseDown);
                 talkFlowchart.ExecuteBlock(targetBlock);
+                isLight = true;
             }
             else{
                 Block targetBlock = talkFlowchart.FindBlock("noReaction");

@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 public class tanglangGetting : MonoBehaviour {
     public static Transform player;
     public static GameObject pivot;
     public static GameObject goal;
+    public static Flowchart talkFlowchart;
+
     public GameObject lab;
     public static bool gettingTanglang = false;
     public static GameObject tanglang;
@@ -15,6 +18,7 @@ public class tanglangGetting : MonoBehaviour {
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        talkFlowchart = GameObject.FindGameObjectWithTag("talkFlowchart").GetComponent<Flowchart>();
         tanglang = GameObject.Find("tanglang");
         pivot = GameObject.Find("pivot");
         goal = GameObject.Find("goal");
@@ -37,9 +41,16 @@ public class tanglangGetting : MonoBehaviour {
         float dist = Vector3.Distance(player.position, transform.position);
         if (gettingTanglang == false && dist <= 30)
         {
-            tanglang.transform.position = goal.transform.position;
-            gettingTanglang = true;
-            tanglang.GetComponent<Rigidbody>().useGravity = false;
+            if (!elecOpen.isLight)
+            {
+                talkFlowchart.ExecuteBlock("noTouch");
+            }
+            else
+            {
+                tanglang.transform.position = goal.transform.position;
+                gettingTanglang = true;
+                tanglang.GetComponent<Rigidbody>().useGravity = false;
+            }
         }
     }
 }

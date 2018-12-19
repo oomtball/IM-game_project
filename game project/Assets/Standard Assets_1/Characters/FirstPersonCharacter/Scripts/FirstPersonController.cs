@@ -42,6 +42,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+        public static Flowchart flowchartManager;
 
         // Use this for initialization
         private void Start()
@@ -56,8 +57,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
-        }
+            flowchartManager = GameObject.FindGameObjectWithTag("flowchartController").GetComponent<Flowchart>();
 
+        }
+        public static bool isTalking
+        {
+            get { return flowchartManager.GetBooleanVariable("talking"); }
+        }
+        public static bool isChoosing
+        {
+            get { return flowchartManager.GetBooleanVariable("choosing"); }
+        }
 
         // Update is called once per frame
         public void Update()
@@ -128,7 +138,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_MoveDir += Physics.gravity*m_GravityMultiplier*Time.fixedDeltaTime;
             }
 
-            if (Talkable.isTalking){
+            if (isTalking){
                 m_MoveDir = Vector3.zero;
             }
 

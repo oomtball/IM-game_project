@@ -3,21 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
 
-public class butterflyMachine : MonoBehaviour {
-
+public class boyBINLab : MonoBehaviour
+{
     public static Flowchart talkFlowchart;
     public static Flowchart flowchartManager;
-    public Flowchart butterflyMachineFlowchart;
     public static Transform player;
-    public static bool butterMachineOpen = false;
-
-    void Awake()
+    private int x = 0;
+    // Start is called before the first frame update
+    void Start()
     {
         flowchartManager = GameObject.FindGameObjectWithTag("flowchartController").GetComponent<Flowchart>();
         talkFlowchart = GameObject.FindGameObjectWithTag("talkFlowchart").GetComponent<Flowchart>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
-
     public static bool isTalking
     {
         get { return flowchartManager.GetBooleanVariable("talking"); }
@@ -27,21 +25,29 @@ public class butterflyMachine : MonoBehaviour {
     {
         get { return flowchartManager.GetBooleanVariable("choosing"); }
     }
-
+    // Update is called once per frame
+   
     private void OnMouseDown()
     {
         float dist = Vector3.Distance(player.position, transform.position);
-        if (dist <= 30 && !isTalking)
+        if (dist <= 30 && !isTalking && !isChoosing)
         {
-            if (tanglangLocker.tanglangKeyOpen == false)
+            if (x % 2 == 0)
             {
-                talkFlowchart.ExecuteBlock(talkFlowchart.FindBlock("noReaction"));
+                talkFlowchart.ExecuteBlock("boyBChat1");
+                x += 1;
+            }
+            else if (x % 2 == 1)
+            {
+                talkFlowchart.ExecuteBlock("boyBChat2");
+                x += 1;
             }
             else
             {
-                butterflyMachineFlowchart.ExecuteBlock("butterflyMachineOpen");
-                butterMachineOpen = true;
+                talkFlowchart.ExecuteBlock("boyBChat3");
+                x += 1;
             }
+            
         }
     }
 }

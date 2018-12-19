@@ -6,20 +6,17 @@ using Fungus;
 
 public class backToGallery : MonoBehaviour {
     public static Flowchart talkFlowchart;
-    public string goTo;
-    public bool wantToGo = false;
+    public static Transform player;
     private void Awake()
     {
         talkFlowchart = GameObject.FindGameObjectWithTag("talkFlowchart").GetComponent<Flowchart>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
-    public static bool wantToBack
-    {
-        get { return talkFlowchart.GetBooleanVariable("wantToBack"); }
-    }
+  
     // Update is called once per frame
     void Update () {
         if (Input.GetKeyDown(KeyCode.B)){
-            SceneManager.LoadScene(goTo);
+            player.position = new Vector3(124.7f, 491.5f, 719.9f);
         }
     }
 }

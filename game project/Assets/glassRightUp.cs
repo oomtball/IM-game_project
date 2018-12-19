@@ -5,17 +5,18 @@ using Fungus;
 
 public class glassRightUp : MonoBehaviour {
     public GameObject item;
-    public Transform player;
     public GameObject lab;
     public static GameObject locust;
     public static GameObject moth;
     public static bool tanglangInSpec = false;
     public static Flowchart talkFlowchart;
     public static Flowchart flowchartManager;
+    public static Transform player;
     private void Awake()
     {
         flowchartManager = GameObject.FindGameObjectWithTag("flowchartController").GetComponent<Flowchart>();
         talkFlowchart = GameObject.FindGameObjectWithTag("talkFlowchart").GetComponent<Flowchart>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         locust = GameObject.Find("Locust");
         moth = GameObject.Find("moth");
     }
@@ -25,7 +26,7 @@ public class glassRightUp : MonoBehaviour {
     }
     private void OnMouseDown()
     {
-        float dist = Vector3.Distance(player.position, transform.position);
+        float dist = Vector3.Distance(player.transform.position, transform.position);
         if (tanglangGetting.gettingTanglang && dist <= 30 && !isTalking)
         {
             Vector3 tanglangPosition = new Vector3(-80.17f, 200.06f, -181.9482f);

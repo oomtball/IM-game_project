@@ -8,7 +8,7 @@ public class colorMaze : MonoBehaviour {
     // Use this for initialization
     private void Awake()
     {
-        itemPosition = new Vector3(item.transform.position.x, item.transform.position.y + 15, item.transform.position.z);
+        itemPosition = new Vector3(item.transform.position.x, item.transform.position.y + 18, item.transform.position.z);
     }
     // Update is called once per frame
     void Update () {
