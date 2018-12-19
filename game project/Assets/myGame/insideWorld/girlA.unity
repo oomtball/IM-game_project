@@ -19918,11 +19918,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 945.78015, y: 322.67996}
+  scrollPos: {x: 687.8801, y: 421.6067}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.25
+  zoom: 0.4850013
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -19930,9 +19930,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1949607508}
-  selectedCommands:
-  - {fileID: 1949607511}
+  - {fileID: 1949607501}
+  selectedCommands: []
   variables:
   - {fileID: 1949607516}
   description: 
@@ -20111,7 +20110,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 790.21985
-    y: -6.679962
+    y: -4.618112
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -20131,7 +20130,7 @@ MonoBehaviour:
   - {fileID: 1949607507}
 --- !u!114 &1949607509
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -20150,7 +20149,7 @@ MonoBehaviour:
   fadeTexture: {fileID: 0}
 --- !u!114 &1949607510
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -20368,7 +20367,7 @@ MonoBehaviour:
   durationOLD: 0
 --- !u!114 &1949607519
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
