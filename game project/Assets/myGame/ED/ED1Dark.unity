@@ -415,7 +415,7 @@ MonoBehaviour:
   duration: 2
   targetAlpha: 0
   waitUntilFinished: 1
-  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeColor: {r: 1, g: 1, b: 1, a: 1}
   fadeTexture: {fileID: 0}
 --- !u!114 &1087892705
 MonoBehaviour:
@@ -714,7 +714,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1087892721}
   selectedCommands:
-  - {fileID: 1087892705}
+  - {fileID: 1087892704}
   variables: []
   description: 
   stepPause: 0

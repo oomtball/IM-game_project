@@ -992,8 +992,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 358306292}
-  selectedCommands:
-  - {fileID: 358306318}
+  selectedCommands: []
   variables:
   - {fileID: 358306310}
   description: 
@@ -1463,7 +1462,7 @@ MonoBehaviour:
   value: 0
 --- !u!114 &358306311
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1490,7 +1489,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306312
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1517,7 +1516,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306313
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1544,7 +1543,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306314
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1571,7 +1570,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306315
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1598,7 +1597,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306316
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1625,7 +1624,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306317
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1652,7 +1651,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306318
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1679,7 +1678,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306319
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1706,7 +1705,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306320
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1733,7 +1732,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306321
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1760,7 +1759,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306322
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1787,7 +1786,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306323
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1814,7 +1813,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306324
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1841,7 +1840,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306325
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1868,7 +1867,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306326
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1895,7 +1894,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306327
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1922,7 +1921,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306328
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1949,7 +1948,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306329
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1976,7 +1975,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306330
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2003,7 +2002,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306331
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2030,7 +2029,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306332
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2057,7 +2056,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306333
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2084,7 +2083,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306334
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2111,7 +2110,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306335
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2138,7 +2137,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306336
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2165,7 +2164,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306337
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2192,7 +2191,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306338
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2219,7 +2218,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306339
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2246,7 +2245,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306340
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2273,7 +2272,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306341
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2300,7 +2299,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306342
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2327,7 +2326,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306343
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2354,7 +2353,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306344
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2381,7 +2380,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &358306345
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

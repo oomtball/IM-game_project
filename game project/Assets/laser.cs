@@ -18,6 +18,13 @@ public class laser : MonoBehaviour {
     {
         get { return talkFlowchart.GetBooleanVariable("back"); }
     }
+    private void Update()
+    {
+        if (!back)
+        {
+            flag = 0;
+        }
+    }
     // Update is called once per frame
     private void OnCollisionEnter(UnityEngine.Collision collision)
     {
