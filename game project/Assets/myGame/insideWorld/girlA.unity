@@ -25655,10 +25655,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1949607501}
-  selectedCommands:
-  - {fileID: 1949607528}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 1949607516}
   - {fileID: 1949607512}
@@ -26329,7 +26327,7 @@ MonoBehaviour:
   callMode: 1
 --- !u!114 &1949607525
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -26356,7 +26354,7 @@ MonoBehaviour:
   - {fileID: 1949607526}
 --- !u!114 &1949607526
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -26420,7 +26418,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &1949607527
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -26439,7 +26437,7 @@ MonoBehaviour:
   fadeTexture: {fileID: 0}
 --- !u!114 &1949607528
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

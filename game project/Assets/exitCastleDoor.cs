@@ -27,7 +27,7 @@ public class exitCastleDoor : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            talkFlowchart.ExecuteBlock("goToED5");
+            talkFlowchart.ExecuteBlock("goYa");
         }
     }
 }
