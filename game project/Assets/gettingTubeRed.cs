@@ -29,6 +29,8 @@ public class gettingTubeRed : MonoBehaviour {
             tubeRed = false;
             item.transform.SetParent(testTube.transform, true);
             item.GetComponent<Rigidbody>().useGravity = true;
+            item.GetComponent<Rigidbody>().isKinematic = false;
+            item.GetComponent<Rigidbody>().detectCollisions = true;
         }
     }
     private void OnMouseDown()
@@ -39,6 +41,8 @@ public class gettingTubeRed : MonoBehaviour {
             item.transform.position = goal.transform.position;
             item.GetComponent<Rigidbody>().useGravity = false;
             tubeRed = true;
+            item.GetComponent<Rigidbody>().isKinematic = true;
+            item.GetComponent<Rigidbody>().detectCollisions = false;
             //item.GetComponent<Rigidbody>().useGravity = false;
         }
     }

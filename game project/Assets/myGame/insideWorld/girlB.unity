@@ -1346,7 +1346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1273452402}
+  selectedFlowchart: {fileID: 799097015}
 --- !u!4 &81542214
 Transform:
   m_ObjectHideFlags: 1
@@ -14803,6 +14803,7 @@ GameObject:
   - component: {fileID: 799097018}
   - component: {fileID: 799097019}
   - component: {fileID: 799097017}
+  - component: {fileID: 799097022}
   m_Layer: 0
   m_Name: talkFlowchart
   m_TagString: talkFlowchart
@@ -14837,7 +14838,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 799097016}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 799097022}
   variables: []
   description: 
   stepPause: 0
@@ -14876,6 +14878,7 @@ MonoBehaviour:
   eventHandler: {fileID: 799097020}
   commandList:
   - {fileID: 799097019}
+  - {fileID: 799097022}
   - {fileID: 799097018}
   - {fileID: 799097017}
 --- !u!114 &799097017
@@ -14977,6 +14980,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &799097022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799097014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 429
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 0
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
 --- !u!1 &803893252
 GameObject:
   m_ObjectHideFlags: 0
