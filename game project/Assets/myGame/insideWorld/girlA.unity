@@ -26108,7 +26108,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u5230\u8655\u90FD\u662F\u2026\u9677\u9631!?\n"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 701545285}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26278,7 +26278,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u600E\u9EBC\u53EF\u4EE5\u653E\u68C4\u2026!\n"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 701545285}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26341,7 +26341,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u8981\u60F3\u6D3B\u547D\u7684\u8A71\uFF0C\u5FC5\u9808\u975E\u5E38\u5C0F\u5FC3\u624D\u884C\u2026\u3002"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 701545285}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26368,7 +26368,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u770B\u4F86\u9019\u68DF\u623F\u5B50\u771F\u7684\u975E\u5E38\u60F3\u628A\u6211\u5011\u541E\u566C\u6389\u2026\u3002\n"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 701545285}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1

@@ -1237,6 +1237,7 @@ GameObject:
   - component: {fileID: 2145854410}
   - component: {fileID: 2145854409}
   - component: {fileID: 2145854408}
+  - component: {fileID: 2145854427}
   m_Layer: 0
   m_Name: talkFlowchart
   m_TagString: talkFlowchart
@@ -1246,7 +1247,7 @@ GameObject:
   m_IsActive: 1
 --- !u!114 &2145854408
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1273,7 +1274,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &2145854409
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1686,6 +1687,7 @@ MonoBehaviour:
   - {fileID: 2145854413}
   - {fileID: 2145854408}
   - {fileID: 2145854409}
+  - {fileID: 2145854427}
   - {fileID: 2145854420}
 --- !u!114 &2145854425
 MonoBehaviour:
@@ -1713,7 +1715,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 2145854424}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 2145854427}
   variables: []
   description: 
   stepPause: 0
@@ -1739,3 +1742,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2145854427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145854407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 38
+  indentLevel: 0
+  storyText: "\u300EED2_\u4E0D\u88AB\u5141\u8A31\u653E\u68C4\u4E4B\u4EBA\u3002\u300F"
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
