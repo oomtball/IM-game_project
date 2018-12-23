@@ -32,12 +32,12 @@ public class boyBINLab : MonoBehaviour
         float dist = Vector3.Distance(player.position, transform.position);
         if (dist <= 30 && !isTalking && !isChoosing)
         {
-            if (x % 2 == 0)
+            if (x % 3 == 0)
             {
                 talkFlowchart.ExecuteBlock("boyBChat1");
                 x += 1;
             }
-            else if (x % 2 == 1)
+            else if (x % 3 == 1)
             {
                 talkFlowchart.ExecuteBlock("boyBChat2");
                 x += 1;
