@@ -10,6 +10,7 @@ public class boyBTalking : MonoBehaviour {
     public static bool afterKitchen = false;
     public static bool afterPart2 = false;
     public static bool boyBPart1 = false;
+    public static bool boyBPart2 = false;
 
     void Awake()
     {
@@ -33,11 +34,20 @@ public class boyBTalking : MonoBehaviour {
         {
             if (!afterKitchen)
             {
-                talkFlowchart.ExecuteBlock("boyBPart1");
-                boyBPart1 = true;
+                if (!boyBPart1)
+                {
+                    talkFlowchart.ExecuteBlock("boyBPart1");
+                    boyBPart1 = true;
+                }
             }
-            else
-                talkFlowchart.ExecuteBlock("boyBPart2");
+            else 
+            {
+                if (!boyBPart2)
+                {
+                    talkFlowchart.ExecuteBlock("boyBPart2");
+                    boyBPart2 = true;
+                }
+            }
         }
     }
 }

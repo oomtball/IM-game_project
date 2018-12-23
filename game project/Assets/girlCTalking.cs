@@ -10,6 +10,8 @@ public class girlCTalking : MonoBehaviour {
     public static bool afterKitchen = false;
     public static bool afterPart2 = false;
     public static bool girlCPart1 = false;
+    public static bool girlCPart2 = false;
+    public static bool girlCPart3 = false;
 
     void Awake()
     {
@@ -33,13 +35,28 @@ public class girlCTalking : MonoBehaviour {
         {
             if (!afterKitchen)
             {
-                talkFlowchart.ExecuteBlock("girlCPart1");
-                girlCPart1 = true;
+                if (!girlCPart1)
+                {
+                    talkFlowchart.ExecuteBlock("girlCPart1");
+                    girlCPart1 = true;
+                }
             }
             else if (afterKitchen && !afterPart2)
-                talkFlowchart.ExecuteBlock("girlCPart2");
+            {
+                if (!girlCPart2)
+                {
+                    talkFlowchart.ExecuteBlock("girlCPart2");
+                    girlCPart2 = true;
+                }
+            }
             else if (afterPart2)
-                talkFlowchart.ExecuteBlock("girlCPart3");
+            {
+                if (!girlCPart3)
+                {
+                    talkFlowchart.ExecuteBlock("girlCPart3");
+                    girlCPart3 = true;
+                }
+            }
         }	
 	}
 }

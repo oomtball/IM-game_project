@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<MidiSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SoundFonts>
+    <SoundFontInfo>
+      <Name>GeneralUser_GS_SoftSynth_v144</Name>
+      <MultiWaves>true</MultiWaves>
+      <Panoramic>true</Panoramic>
+      <DefaultBankNumber>0</DefaultBankNumber>
+      <DrumKitBankNumber>128</DrumKitBankNumber>
+      <SF2Path>C:/Users/Thierry/AppData/LocalLow/DefaultCompany/MidiPlayer\SoundFont\GeneralUser_GS_SoftSynth_v144.sf2</SF2Path>
+    </SoundFontInfo>
+  </SoundFonts>
+  <ActiveSounFontInfo>
+    <Name>GeneralUser_GS_SoftSynth_v144</Name>
+    <MultiWaves>true</MultiWaves>
+    <Panoramic>true</Panoramic>
+    <DefaultBankNumber>0</DefaultBankNumber>
+    <DrumKitBankNumber>128</DrumKitBankNumber>
+    <SF2Path>C:/Users/Thierry/AppData/LocalLow/DefaultCompany/MidiPlayer\SoundFont\GeneralUser_GS_SoftSynth_v144.sf2</SF2Path>
+  </ActiveSounFontInfo>
+  <MidiFiles>
+    <string>opening1_d</string>
+    <string>candyHouse</string>
+    <string>wakeUp</string>
+    <string>lab</string>
+    <string>funnyChat</string>
+    <string>forest</string>
+    <string>castle</string>
+  </MidiFiles>
+</MidiSet>

@@ -23,6 +23,7 @@ TagManager:
   - butterflyKey
   - doorAMedicine
   - bottle
+  - bgm
   layers:
   - Default
   - TransparentFX

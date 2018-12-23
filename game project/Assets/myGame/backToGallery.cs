@@ -28,7 +28,7 @@ public class backToGallery : MonoBehaviour {
     void Update () {
         if (Input.GetKeyDown(KeyCode.B)){
             if (!isTalking && !isChoosing)
-                player.position = new Vector3(124.7f, 491.5f, 719.9f);
+                talkFlowchart.ExecuteBlock("backToGallery");
         }
     }
 }
