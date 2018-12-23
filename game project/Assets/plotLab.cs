@@ -24,6 +24,10 @@ public class plotLab : MonoBehaviour
     {
         get { return talkFlowchart.GetBooleanVariable("candyToCastle"); }
     }
+    public static bool labFail
+    {
+        get { return talkFlowchart.GetBooleanVariable("labFail"); }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -38,6 +42,9 @@ public class plotLab : MonoBehaviour
         if (candyToCastle)
         {
             SceneManager.LoadScene("candyToCastle");
+        }
+        if (labFail){
+            SceneManager.LoadScene("labFail");
         }
     }
 }

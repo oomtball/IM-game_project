@@ -40,5 +40,9 @@ public class cicadaLocker : MonoBehaviour {
             talkFlowchart.ExecuteBlock(talkFlowchart.FindBlock("cicadaKeyOpen"));
             cicadaOpen = true;
         }
+        if (gettingTanglangKey.gettingTanglang || butterKeyGetting.gettingButterfly 
+            || spiderKeyGetting.gettingSpider && dist <= 30){
+            talkFlowchart.ExecuteBlock("wrongKey");
+        }
     }
 }

@@ -50,5 +50,8 @@ public class butterflyLocker : MonoBehaviour {
             talkFlowchart.ExecuteBlock(talkFlowchart.FindBlock("butterKeyOpen"));
             butterflyOpen = true;
         }
+        if (gettingTanglangKey.gettingTanglang && dist <= 30){
+            talkFlowchart.ExecuteBlock("wrongKey");
+        }
     }
 }
