@@ -34,6 +34,8 @@ public class tanglangGetting : MonoBehaviour {
             gettingTanglang = false;
             tanglang.transform.SetParent(lab.transform, true);
             tanglang.GetComponent<Rigidbody>().useGravity = true;
+            tanglang.GetComponent<Rigidbody>().isKinematic = false;
+            tanglang.GetComponent<Rigidbody>().detectCollisions = true;
         }
     }
     private void OnMouseDown()
@@ -50,6 +52,8 @@ public class tanglangGetting : MonoBehaviour {
                 tanglang.transform.position = goal.transform.position;
                 gettingTanglang = true;
                 tanglang.GetComponent<Rigidbody>().useGravity = false;
+                tanglang.GetComponent<Rigidbody>().isKinematic = true;
+                tanglang.GetComponent<Rigidbody>().detectCollisions = false;
             }
         }
     }
