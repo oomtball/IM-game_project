@@ -8,6 +8,10 @@ public class goIntoRoom3 : MonoBehaviour
     public static Flowchart talkFlowchart;
     public static Flowchart flowchartManager;
     public GameObject barrier;
+    public GameObject Wilson;
+    public GameObject Sam;
+    public GameObject Newton;
+    public GameObject Eden;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +26,10 @@ public class goIntoRoom3 : MonoBehaviour
         if (other.CompareTag("Player")){
             talkFlowchart.ExecuteBlock("goIntoRoom3");
             Destroy(barrier);
+            Destroy(Wilson);
+            Destroy(Sam);
+            Destroy(Newton);
+            Destroy(Eden);
         }
     }
 }
