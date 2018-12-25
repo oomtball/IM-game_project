@@ -784,7 +784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7e21d1976290496ba3b39235cc4814f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goToTheScene: wakeup
+  goToTheScene: wakeup2
 --- !u!1 &2006197583
 GameObject:
   m_ObjectHideFlags: 0

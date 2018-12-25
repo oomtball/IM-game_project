@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/myGame/insideWorld/labFail.unity
     guid: 361f8a99e2d6b4d9ebdd1971313cc06b
+  - enabled: 1
+    path: Assets/myGame/CH1/wakeup2.unity
+    guid: 22bc132007578404d8188759edf27aae
   m_configObjects: {}
