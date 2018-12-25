@@ -42,12 +42,6 @@ public class cicadaLocker : MonoBehaviour {
         }
         if (gettingTanglangKey.gettingTanglang || butterKeyGetting.gettingButterfly 
             || spiderKeyGetting.gettingSpider && dist <= 30){
-            butterKeyGetting.canGetThis = true;
-            butterKeyGetting.gettingButterfly = false;
-            gettingTanglangKey.canGetThis = true;
-            gettingTanglangKey.gettingTanglang = false;
-            spiderKeyGetting.canGetThis = true;
-            spiderKeyGetting.gettingSpider = false;
             talkFlowchart.ExecuteBlock("wrongKey");
         }
     }

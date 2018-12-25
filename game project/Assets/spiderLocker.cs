@@ -35,10 +35,6 @@ public class spiderLocker : MonoBehaviour {
             spiderKeyOpen = true;
         }
         if (gettingTanglangKey.gettingTanglang || butterKeyGetting.gettingButterfly && dist <= 30){
-            butterKeyGetting.canGetThis = true;
-            butterKeyGetting.gettingButterfly = false;
-            gettingTanglangKey.canGetThis = true;
-            gettingTanglangKey.gettingTanglang = false;
             talkFlowchart.ExecuteBlock("wrongKey");
         }
     }
