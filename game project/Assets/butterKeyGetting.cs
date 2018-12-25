@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 public class butterKeyGetting : MonoBehaviour {
     public static Transform player;
     public static GameObject pivot;
     public static GameObject goal;
     public GameObject girlC;
+    public static Flowchart talkFlowchart;
+    public static Flowchart flowchartManager;
     public static bool gettingButterfly = false;
     public static GameObject butterKey;
     public static bool canGetThis = true;
@@ -19,6 +22,8 @@ public class butterKeyGetting : MonoBehaviour {
         pivot = GameObject.Find("pivot");
         goal = GameObject.Find("goal");
         butterKey.SetActive(false);
+        flowchartManager = GameObject.FindGameObjectWithTag("flowchartController").GetComponent<Flowchart>();
+        talkFlowchart = GameObject.FindGameObjectWithTag("talkFlowchart").GetComponent<Flowchart>();
     }
     private void Update()
     {
@@ -37,6 +42,7 @@ public class butterKeyGetting : MonoBehaviour {
     }
     private void OnMouseDown()
     {
+        talkFlowchart.ExecuteBlock("getButterflyKey");
         float dist = Vector3.Distance(player.position, transform.position);
         if (gettingButterfly == false && canGetThis && dist <= 30)
         {

@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 public class spiderKeyGetting : MonoBehaviour {
     public static Transform player;
     public static GameObject pivot;
     public static GameObject goal;
+    public static Flowchart talkFlowchart;
+    public static Flowchart flowchartManager;
     public GameObject girlC;
     public static bool gettingSpider = false;
     public static GameObject spiderKey;
@@ -20,6 +23,8 @@ public class spiderKeyGetting : MonoBehaviour {
         goal = GameObject.Find("goal");
         spiderKey = GameObject.Find("spiderKey");
         count = 0;
+        flowchartManager = GameObject.FindGameObjectWithTag("flowchartController").GetComponent<Flowchart>();
+        talkFlowchart = GameObject.FindGameObjectWithTag("talkFlowchart").GetComponent<Flowchart>();
         //spiderKey.GetComponent<Rigidbody>().detectCollisions = true;
         //body = GetComponent<Rigidbody>();
     }
@@ -40,6 +45,7 @@ public class spiderKeyGetting : MonoBehaviour {
     }
     private void OnMouseDown()
     {
+        talkFlowchart.ExecuteBlock("getSpiderKey");
         float dist = Vector3.Distance(player.position, transform.position);
         if (gettingSpider == false && dist <= 30 && canGetThis)
         {

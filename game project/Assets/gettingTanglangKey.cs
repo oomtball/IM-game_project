@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 public class gettingTanglangKey : MonoBehaviour {
     public static Transform player;
     public static GameObject pivot;
     public static GameObject goal;
+    public static Flowchart talkFlowchart;
+    public static Flowchart flowchartManager;
     public GameObject girlC;
     public static bool gettingTanglang = false;
     public static GameObject tanglangKey;
@@ -19,6 +22,8 @@ public class gettingTanglangKey : MonoBehaviour {
         tanglangKey.SetActive(false);
         pivot = GameObject.Find("pivot");
         goal = GameObject.Find("goal");
+        flowchartManager = GameObject.FindGameObjectWithTag("flowchartController").GetComponent<Flowchart>();
+        talkFlowchart = GameObject.FindGameObjectWithTag("talkFlowchart").GetComponent<Flowchart>();
     }
     private void Update()
     {
@@ -37,6 +42,7 @@ public class gettingTanglangKey : MonoBehaviour {
     }
     private void OnMouseDown()
     {
+        talkFlowchart.ExecuteBlock("getTanglangKey");
         float dist = Vector3.Distance(player.position, transform.position);
         if (gettingTanglang == false && dist <= 30 && canGetThis)
         {

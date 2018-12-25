@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 public class cicadaKeyGetting : MonoBehaviour {
     public static Transform player;
     public static bool gettingCicada = false;
+    public static Flowchart talkFlowchart;
+    public static Flowchart flowchartManager;
     public static GameObject pivot;
     public static GameObject goal;
     public GameObject girlC;
@@ -18,6 +21,8 @@ public class cicadaKeyGetting : MonoBehaviour {
         pivot = GameObject.Find("pivot");
         goal = GameObject.Find("goal");
         cicadaKey = GameObject.Find("cicadaKey");
+        flowchartManager = GameObject.FindGameObjectWithTag("flowchartController").GetComponent<Flowchart>();
+        talkFlowchart = GameObject.FindGameObjectWithTag("talkFlowchart").GetComponent<Flowchart>();
         cicadaKey.SetActive(false);
     }
     private void Update()
@@ -37,6 +42,7 @@ public class cicadaKeyGetting : MonoBehaviour {
     }
     private void OnMouseDown()
     {
+        talkFlowchart.ExecuteBlock("getCicadaKey");
         float dist = Vector3.Distance(player.position, transform.position);
         if (gettingCicada == false && dist <= 30 && canGetThis)
         {
