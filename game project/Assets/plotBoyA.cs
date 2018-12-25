@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class plotBoyA : MonoBehaviour {
     public GameObject bottle1;
+    public GameObject endPaperYa;
     public GameObject paperInBottle;
     public static Flowchart talkFlowchart;
     public static Flowchart flowchartManager;
@@ -44,6 +45,11 @@ public class plotBoyA : MonoBehaviour {
         }
         if (endBoyA){
             SceneManager.LoadScene("ED3");
+        }
+        if (startPaper.pickUpStartPaper && paper1.pickUpPaper1 && paper2.pickUpPaper2 && paper3.pickUpPaper3
+            && paper4.pickUpPaper4 && paper5.pickUpPaper5 && paper6.pickUpPaper6)
+        {
+            endPaperYa.SetActive(true);
         }
     }
 }

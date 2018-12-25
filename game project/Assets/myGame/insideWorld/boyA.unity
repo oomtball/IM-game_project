@@ -9188,6 +9188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bottle1: {fileID: 588521053}
+  endPaperYa: {fileID: 2079573014}
   paperInBottle: {fileID: 1968188475}
   ya: 0
 --- !u!1 &1804534153
@@ -10263,7 +10264,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2106350153}
   - component: {fileID: 2106350152}
-  - component: {fileID: 2106350151}
   m_Layer: 0
   m_Name: gameManagerBoyA
   m_TagString: Untagged
@@ -10271,19 +10271,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2106350151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2106350150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f687444ab28a94b5aa7334d5d6d8063b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  endPaperYa: {fileID: 2079573014}
 --- !u!114 &2106350152
 MonoBehaviour:
   m_ObjectHideFlags: 0
