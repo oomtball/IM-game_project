@@ -37,7 +37,7 @@ public class gettingTubeYellow : MonoBehaviour {
     private void OnMouseDown()
     {
         float dist = Vector3.Distance(player.position, transform.position);
-        if (tubeYellow == false && dist <= 30)
+        if (tubeYellow == false && !gettingTubeRed.tubeRed && !gettingTubeBlue.tubeBlue && !gettingTubeGreen.tubeGreen && dist <= 30)
         {
             item.transform.position = goal.transform.position;
             item.GetComponent<Rigidbody>().useGravity = false;

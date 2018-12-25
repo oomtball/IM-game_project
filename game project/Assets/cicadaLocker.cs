@@ -37,6 +37,7 @@ public class cicadaLocker : MonoBehaviour {
             cicadaKeyGetting.cicadaKey.transform.rotation = Quaternion.Euler(-90, 0, 0);
             cicadaKeyGetting.gettingCicada = false;
             cicadaKeyGetting.canGetThis = false;
+            Destroy(cicadaKeyGetting.cicadaKey.GetComponent<Rigidbody>());
             talkFlowchart.ExecuteBlock(talkFlowchart.FindBlock("cicadaKeyOpen"));
             cicadaOpen = true;
         }

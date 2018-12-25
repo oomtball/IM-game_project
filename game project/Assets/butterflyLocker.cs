@@ -41,13 +41,11 @@ public class butterflyLocker : MonoBehaviour {
         {
             Vector3 butterflyKeyPosition = new Vector3(1151.824f, -64.5f, -74.7f);
             butterKeyGetting.butterKey.transform.SetParent(girlC.transform, true);
-            butterKeyGetting.butterKey.GetComponent<Rigidbody>().isKinematic = false;
-            butterKeyGetting.butterKey.GetComponent<Rigidbody>().detectCollisions = false;
+            Destroy(butterKeyGetting.butterKey.GetComponent<Rigidbody>());
             item.transform.position = butterflyKeyPosition;
             item.transform.rotation = Quaternion.Euler(-90, 0, 0);
             butterKeyGetting.gettingButterfly = false;
             butterKeyGetting.canGetThis = false;
-            butterKeyGetting.butterKey.GetComponent<Rigidbody>().isKinematic = false;
             talkFlowchart.ExecuteBlock(talkFlowchart.FindBlock("butterKeyOpen"));
             butterflyOpen = true;
         }

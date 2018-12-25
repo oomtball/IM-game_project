@@ -9823,7 +9823,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 343810760}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 246.25299, y: -272.8, z: 119.8996}
+  m_LocalPosition: {x: 246.25299, y: -262.3, z: 119.8996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3676292}
@@ -39872,6 +39872,8 @@ GameObject:
   - component: {fileID: 1336891973}
   - component: {fileID: 1336891972}
   - component: {fileID: 1336891975}
+  - component: {fileID: 1336891977}
+  - component: {fileID: 1336891976}
   m_Layer: 0
   m_Name: talkFlowchart
   m_TagString: talkFlowchart
@@ -41626,9 +41628,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1336891536}
+  - {fileID: 1336891977}
   selectedCommands:
-  - {fileID: 1336891534}
+  - {fileID: 1336891976}
   variables:
   - {fileID: 1336891559}
   - {fileID: 1336891546}
@@ -52471,6 +52473,49 @@ MonoBehaviour:
   fadeDuration: 0
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
+--- !u!114 &1336891976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336891514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 611
+  indentLevel: 0
+  soundClip: {fileID: 8300000, guid: 828e64cf6a23a4fd49f11e412f74eaeb, type: 3}
+  volume: 1
+  waitUntilFinished: 0
+--- !u!114 &1336891977
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336891514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 1701.2166
+    y: 85.71628
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 610
+  blockName: clickButton
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1336891976}
 --- !u!1 &1341646334
 GameObject:
   m_ObjectHideFlags: 0

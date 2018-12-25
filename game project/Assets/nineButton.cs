@@ -25,6 +25,7 @@ public class nineButton : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        talkFlowchart.ExecuteBlock("clickButton");
         if (cicadaLocker.cicadaOpen)
         {
             float dist = Vector3.Distance(player.position, transform.position);

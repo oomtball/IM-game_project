@@ -27,10 +27,9 @@ public class spiderLocker : MonoBehaviour {
             Vector3 spiderKeyPosition = new Vector3(1151.83f, -44.6346f, -74.0697f);
             item.transform.position = spiderKeyPosition;
             item.transform.rotation = Quaternion.Euler(-90, 0, 0);
+            Destroy(spiderKeyGetting.spiderKey.GetComponent<Rigidbody>());
             spiderKeyGetting.gettingSpider = false;
             spiderKeyGetting.canGetThis = false;
-            spiderKeyGetting.spiderKey.GetComponent<Rigidbody>().isKinematic = false;
-            spiderKeyGetting.spiderKey.GetComponent<Rigidbody>().detectCollisions = false;
             talkFlowchart.ExecuteBlock(talkFlowchart.FindBlock("spiderKeyOpen"));
             spiderKeyOpen = true;
         }

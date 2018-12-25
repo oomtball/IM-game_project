@@ -33,11 +33,11 @@ public class tanglangLocker : MonoBehaviour {
         {
             gettingTanglangKey.tanglangKey.transform.SetParent(girlC.transform, true);
             Vector3 tanglangKeyPosition = new Vector3(1171.864f, -44.22f, -74.7f);
+            Destroy(gettingTanglangKey.tanglangKey.GetComponent<Rigidbody>());
             item.transform.position = tanglangKeyPosition;
             item.transform.rotation = Quaternion.Euler(90, 0, 180);
             gettingTanglangKey.gettingTanglang = false;
             gettingTanglangKey.canGetThis = false;
-            gettingTanglangKey.tanglangKey.GetComponent<Rigidbody>().isKinematic = false;
             talkFlowchart.ExecuteBlock(talkFlowchart.FindBlock("tanglangKeyOpen"));
             tanglangKeyOpen = true;
         }
