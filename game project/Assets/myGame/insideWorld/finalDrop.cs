@@ -33,7 +33,7 @@ public class finalDrop : MonoBehaviour
         float dist = Vector3.Distance(player.position, transform.position);
         if (dist <= 30 && !isTalking)
         {
-            if (threeButton.finalSuccess == false)
+            if (nineButton.finalSuccess == false)
             {
                 talkFlowchart.ExecuteBlock(talkFlowchart.FindBlock("noReaction"));
             }

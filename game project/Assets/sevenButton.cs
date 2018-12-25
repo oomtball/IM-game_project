@@ -28,7 +28,7 @@ public class sevenButton : MonoBehaviour {
             float dist = Vector3.Distance(player.position, transform.position);
             if (dist <= 30 && !isTalking)
             {
-                if (sixButton.count == 2 && zeroButton.count == 2 && threeButton.count == 0 && count == 0)
+                if (nineButton.count == 0 && zeroButton.count == 0 && threeButton.count == 1 && count == 0)
                 {
                     count += 1;
                 }

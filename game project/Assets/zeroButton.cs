@@ -28,11 +28,11 @@ public class zeroButton : MonoBehaviour {
             float dist = Vector3.Distance(player.position, transform.position);
             if (dist <= 30 && !isTalking)
             {
-                if (sixButton.count == 1 && sevenButton.count == 0 && threeButton.count == 0 && count == 0)
+                if (nineButton.count == 1 && sevenButton.count == 1 && threeButton.count == 1 && count == 0)
                 {
                     count += 1;
                 }
-                else if (sixButton.count == 1 && sevenButton.count == 0 && threeButton.count == 0 && count == 1)
+                else if (nineButton.count == 1 && sevenButton.count == 1 && threeButton.count == 1 && count == 1)
                 {
                     count += 1;
                 }

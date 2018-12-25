@@ -18,8 +18,8 @@ public class finalTrapOpen : MonoBehaviour {
 
     private void Update()
     {
-        if (!doorBOne.up && !doorBTwo.up && doorBThree.up && !doorBFour.up && !doorBFive.up && doorBSix.up &&
-            doorBSeven.up && !doorBEight.up && !doorBNine.up && doorBZero.up && finish == false){
+        if (!doorBOne.up && !doorBTwo.up && doorBThree.up && !doorBFour.up && !doorBFive.up &&!doorBSix.up &&
+            doorBSeven.up && !doorBEight.up && doorBNine.up && doorBZero.up && finish == false){
             talkFlowchart.ExecuteBlock(talkFlowchart.FindBlock("finalTrapOpen"));
             finish = true;
         }

@@ -6,7 +6,7 @@ public class finalTrapControl : MonoBehaviour {
 
 	void Update () {
         if (!sixButton.right || !zeroButton.right || !sevenButton.right || !threeButton.right){
-            sixButton.countZero();
+            nineButton.countZero();
             zeroButton.countZero();
             sevenButton.countZero();
             threeButton.countZero();
