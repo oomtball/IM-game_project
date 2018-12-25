@@ -31,12 +31,13 @@ public class tanglangLocker : MonoBehaviour {
         float dist = Vector3.Distance(player.position, transform.position);
         if (gettingTanglangKey.gettingTanglang && dist <= 30)
         {
+            gettingTanglangKey.tanglangKey.transform.SetParent(girlC.transform, true);
             Vector3 tanglangKeyPosition = new Vector3(1171.864f, -44.22f, -74.7f);
             item.transform.position = tanglangKeyPosition;
             item.transform.rotation = Quaternion.Euler(90, 0, 180);
-            gettingTanglangKey.tanglangKey.transform.SetParent(girlC.transform, true);
             gettingTanglangKey.gettingTanglang = false;
             gettingTanglangKey.canGetThis = false;
+            gettingTanglangKey.tanglangKey.GetComponent<Rigidbody>().isKinematic = false;
             talkFlowchart.ExecuteBlock(talkFlowchart.FindBlock("tanglangKeyOpen"));
             tanglangKeyOpen = true;
         }

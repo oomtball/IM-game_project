@@ -7,12 +7,14 @@ using Fungus;
 public class plotLab : MonoBehaviour
 {
     public GameObject cube1;
+    public static Transform player;
     public static Flowchart talkFlowchart;
     public static Flowchart flowchartManager;
     private bool isAct = false;
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         flowchartManager = GameObject.FindGameObjectWithTag("flowchartController").GetComponent<Flowchart>();
         talkFlowchart = GameObject.FindGameObjectWithTag("talkFlowchart").GetComponent<Flowchart>();
     }
@@ -44,7 +46,7 @@ public class plotLab : MonoBehaviour
             SceneManager.LoadScene("candyToCastle");
         }
         if (labFail){
-            SceneManager.LoadScene("labFail");
+            player.position = new Vector3(-158.75f, 187.4f, -160.9f);
         }
     }
 }

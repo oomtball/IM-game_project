@@ -31,17 +31,23 @@ public class cicadaLocker : MonoBehaviour {
         float dist = Vector3.Distance(player.position, transform.position);
         if (cicadaKeyGetting.gettingCicada && dist <= 30)
         {
+            cicadaKeyGetting.cicadaKey.transform.SetParent(girlC.transform, true);
             Vector3 cicadaKeyPosition = new Vector3(1161.664f, -54.46f, -75.6605f);
             cicadaKeyGetting.cicadaKey.transform.position = cicadaKeyPosition;
             cicadaKeyGetting.cicadaKey.transform.rotation = Quaternion.Euler(-90, 0, 0);
             cicadaKeyGetting.gettingCicada = false;
             cicadaKeyGetting.canGetThis = false;
-            cicadaKeyGetting.cicadaKey.transform.SetParent(girlC.transform, true);
             talkFlowchart.ExecuteBlock(talkFlowchart.FindBlock("cicadaKeyOpen"));
             cicadaOpen = true;
         }
         if (gettingTanglangKey.gettingTanglang || butterKeyGetting.gettingButterfly 
             || spiderKeyGetting.gettingSpider && dist <= 30){
+            butterKeyGetting.canGetThis = true;
+            butterKeyGetting.gettingButterfly = false;
+            gettingTanglangKey.canGetThis = true;
+            gettingTanglangKey.gettingTanglang = false;
+            spiderKeyGetting.canGetThis = true;
+            spiderKeyGetting.gettingSpider = false;
             talkFlowchart.ExecuteBlock("wrongKey");
         }
     }

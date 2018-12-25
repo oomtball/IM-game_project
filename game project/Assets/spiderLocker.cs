@@ -23,18 +23,22 @@ public class spiderLocker : MonoBehaviour {
         float dist = Vector3.Distance(player.position, transform.position);
         if (spiderKeyGetting.gettingSpider && dist <= 30)
         {
+            spiderKeyGetting.spiderKey.transform.SetParent(girlC.transform, true);
             Vector3 spiderKeyPosition = new Vector3(1151.83f, -44.6346f, -74.0697f);
             item.transform.position = spiderKeyPosition;
             item.transform.rotation = Quaternion.Euler(-90, 0, 0);
             spiderKeyGetting.gettingSpider = false;
             spiderKeyGetting.canGetThis = false;
-            spiderKeyGetting.spiderKey.transform.SetParent(girlC.transform, true);
             spiderKeyGetting.spiderKey.GetComponent<Rigidbody>().isKinematic = false;
             spiderKeyGetting.spiderKey.GetComponent<Rigidbody>().detectCollisions = false;
             talkFlowchart.ExecuteBlock(talkFlowchart.FindBlock("spiderKeyOpen"));
             spiderKeyOpen = true;
         }
         if (gettingTanglangKey.gettingTanglang || butterKeyGetting.gettingButterfly && dist <= 30){
+            butterKeyGetting.canGetThis = true;
+            butterKeyGetting.gettingButterfly = false;
+            gettingTanglangKey.canGetThis = true;
+            gettingTanglangKey.gettingTanglang = false;
             talkFlowchart.ExecuteBlock("wrongKey");
         }
     }

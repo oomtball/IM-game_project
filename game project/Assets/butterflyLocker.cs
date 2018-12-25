@@ -47,10 +47,13 @@ public class butterflyLocker : MonoBehaviour {
             item.transform.rotation = Quaternion.Euler(-90, 0, 0);
             butterKeyGetting.gettingButterfly = false;
             butterKeyGetting.canGetThis = false;
+            butterKeyGetting.butterKey.GetComponent<Rigidbody>().isKinematic = false;
             talkFlowchart.ExecuteBlock(talkFlowchart.FindBlock("butterKeyOpen"));
             butterflyOpen = true;
         }
         if (gettingTanglangKey.gettingTanglang && dist <= 30){
+            gettingTanglangKey.canGetThis = true;
+            gettingTanglangKey.gettingTanglang = false;
             talkFlowchart.ExecuteBlock("wrongKey");
         }
     }

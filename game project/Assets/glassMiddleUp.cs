@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
 
-public class glassLeftMiddle : MonoBehaviour
+public class glassMiddleUp : MonoBehaviour
 {
     public static Flowchart talkFlowchart;
     public static Flowchart flowchartManager;
@@ -30,6 +30,13 @@ public class glassLeftMiddle : MonoBehaviour
             tanglangGetting.tanglang.GetComponent<Rigidbody>().detectCollisions = true;
             tanglangGetting.tanglang.transform.SetParent(null, true);
             talkFlowchart.ExecuteBlock("tanglangBite");
+        }
+        else if (!tanglangGetting.gettingTanglang && dist <= 30 && !isTalking)
+        {
+            if (!elecOpen.isLight)
+                talkFlowchart.ExecuteBlock("noTouch");
+            else
+                talkFlowchart.ExecuteBlock("thisIsMoth");
         }
     }
 }
