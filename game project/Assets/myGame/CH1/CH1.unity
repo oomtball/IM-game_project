@@ -23531,7 +23531,6 @@ GameObject:
   - component: {fileID: 1225979391}
   - component: {fileID: 1225979390}
   - component: {fileID: 1225979410}
-  - component: {fileID: 1225979418}
   - component: {fileID: 1225979417}
   - component: {fileID: 1225979416}
   - component: {fileID: 1225979415}
@@ -23800,7 +23799,6 @@ MonoBehaviour:
   commandList:
   - {fileID: 1225978234}
   - {fileID: 1225979375}
-  - {fileID: 1225979418}
   - {fileID: 1225979417}
   - {fileID: 1225979416}
   - {fileID: 1225979415}
@@ -23846,8 +23844,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1225978558}
-  selectedCommands: []
+  - {fileID: 1225978189}
+  selectedCommands:
+  - {fileID: 1225979417}
   variables:
   - {fileID: 1225978432}
   - {fileID: 1225978431}
@@ -57968,25 +57967,6 @@ MonoBehaviour:
   indentLevel: 0
   duration: 1
   targetAlpha: 0
-  waitUntilFinished: 1
-  fadeColor: {r: 0, g: 0, b: 0, a: 1}
-  fadeTexture: {fileID: 0}
---- !u!114 &1225979418
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1225978182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 1286
-  indentLevel: 0
-  duration: 3
-  targetAlpha: 1
   waitUntilFinished: 1
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeTexture: {fileID: 0}
