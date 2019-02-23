@@ -2049,7 +2049,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1391827391}
   selectedCommands:
-  - {fileID: 1391827404}
+  - {fileID: 1391827395}
   variables: []
   description: 
   stepPause: 0
@@ -2468,7 +2468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 55
   indentLevel: 0
-  storyText: "\u73FE\u5728\uFF0C\u6211\u7D42\u65BC\u60F3\u8D77\u4E86\u6211\u53EB\u505A\u5C0F\u7F8E\u7684\u539F\u56E0\u4E86\u3002"
+  storyText: "\u73FE\u5728\uFF0C\u6211\u7D42\u65BC\u77E5\u9053\u6211\u53EB\u505A\u5C0F\u7F8E\u7684\u539F\u56E0\u4E86\u3002"
   description: 
   character: {fileID: 412225721}
   portrait: {fileID: 0}
